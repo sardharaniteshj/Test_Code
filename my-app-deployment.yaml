@@ -12,9 +12,9 @@ spec:
     metadata:
       labels:
         app: my-app-deployment
-    spec:
-      containers:
-        - name: my-app
-          image: nginx
-          ports:
-            - containerPort: 80
+  spec:      
+    containers:
+    - name: my-app
+      image: nginx
+      ports:
+      - containerPort: 80
