@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app-deployment
-  namespace: default
+  namespace: default            # We hve given default namespace so the pod will be created under the default namespace
 spec:
-  replicas: 2
+  replicas: 2                   # Two replica of pod will be created with the lable
   selector:
     matchLabels:
-      app: my-app-deployment
+      app: my-app-deployment    
   template:
     metadata:
       labels:
@@ -15,6 +15,6 @@ spec:
   spec:      
     containers:
     - name: my-app
-      image: nginx
+      image: nginx              # Image and their port was mention
       ports:
       - containerPort: 80
