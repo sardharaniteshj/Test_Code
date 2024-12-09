@@ -12,9 +12,9 @@ spec:
     metadata:
       labels:
         app: cache
-    spec:
-      containers:
-        - name: redis
-          image: redis
-          ports:
-            - containerPort: 6379
+  spec:
+    containers:
+    - name: redis
+      image: redis
+      ports:
+    - containerPort: 6379
