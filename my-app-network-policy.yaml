@@ -12,14 +12,12 @@ spec:
     - Egress
   ingress:
     - from:
-        # Allow incoming traffic from all pods in the same namespace
-        - podSelector: {}
-        # Allow incoming traffic from a specific pod with label app=trusted
-        - podSelector:
+        - podSelector: {}                 # Allow incoming traffic from all pods in the same namespace
+
+        - podSelector:                    # Allow incoming traffic from a specific pod with label app=trusted
             matchLabels:
               app: trusted
   egress:
     - to:
-        # Allow outgoing traffic to all pods in the same namespace
-        - podSelector: {}
-  # Default deny rules are implicit unless specified in ingress or egress
+        - podSelector: {}                  # Allow outgoing traffic to all pods in the same namespace
+                                           # Default deny rules are implicit unless specified in ingress or egress
